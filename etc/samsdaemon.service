@@ -1,0 +1,20 @@
+[Unit]
+Description=Squid Account Management System (SAMS)
+After=network.target
+After=mariadb.service
+After=squid.target
+
+[Service]
+Type=forking
+User=root
+Group=root
+OOMScoreAdjust=-100
+Restart=always
+RestartSec=5s
+ExecStart=/usr/local/bin/samsdaemon
+ExecStop=/usr/bin/kill -9 $MAINPID
+ExecReload=/usr/bin/kill -HUP $MAINPID
+PIDFile=/var/run/samsdaemon.pid
+
+[Install]
+WantedBy=multi-user.target
