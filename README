@@ -27,8 +27,8 @@ ln -s /usr/lib64/mysql/libmysqlclient.so.18.0.0 /usr/lib/libmysqlclient.so
 ln -s /usr/lib64/libpcre.so.1.2.0 /usr/lib/libpcre.so
 
 Качаем, компилим.
-git clone https://github.com/zulicheg/sams.git
-cd sams
+git clone https://github.com/zulicheg/sams-1.0.5.git
+cd sams-1.0.5
 ./configure
 make && make install
 
