@@ -10,6 +10,9 @@
 # Please refer to the General Public Licence http://www.gnu.org/ or Licence.txt
 ################################################################################
 
+Коротко.
+Нужен был sams, взял версию 1.0.5, немного подправил чтобы легко было ставить и залил на гитхаб, опять же, чтобы легче было скачать исходники и скопилить.
+
 Протестировано на Centos 7 (2009) x86_64:
 - MariaDB 5.5.68
 - Apache 2.4.6 + mod_php
@@ -23,6 +26,7 @@ gcc make libxml2-devel pcre-devel gcc make mariadb mariadb-server mariadb-devel 
 ln -s /usr/lib64/mysql/libmysqlclient.so.18.0.0 /usr/lib/libmysqlclient.so 
 ln -s /usr/lib64/libpcre.so.1.2.0 /usr/lib/libpcre.so
 
+Качаем, компилим.
 git clone https://github.com/zulicheg/sams.git
 cd sams
 ./configure
@@ -37,3 +41,5 @@ make && make install
 4. make install юнит для запуска сервиса /etc/systemd/system/samsdaemon.service
 5. Внесены правки в файлы *.sql чтобы таблицы импортировались в новые версии MySQL/MariaDB
 6. Внесены правки в файлы configtray.php и webconfigtray.php без которых невозможно было настроить sams через web-интерфейс
+
+P.S. Спасибо разработчику за SAMS, жаль что проект заброшен.
